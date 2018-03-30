@@ -4,6 +4,8 @@ SpikeMVC is a minimalistic MVC framework which enables you to develop lightweigh
 
 SpikeMVC is based on the templating engine [Mustache](https://mustache.github.io/). In the future releases it is planned to add support to other templating engines such as Handlebars, HAML, etc...
 
+
+
 ## Creating a Hello World Web Application
 
 SpikeMVC web application handles HTTP requests using controllers. Controllers can be created under the sub folder "pages" in the root folder of your web application.
@@ -86,19 +88,3 @@ sudo service apache2 restart
 ```
 
 make sure you have included the file '.htaccess' inside the folder where you have your web application.
-
-### NginX running in Linux/CentOS
-
-just add this line to your sever declaration (its usually in the file /etc/nginx/sites-enabled/default)
-
-```shell
-server {
-    location / {
-        try_files $uri $uri/ /index.php;
-    }
-}
-```
-
-### WAMP Server running in Windows
-
-click on the WAMP server system tray icon, select the menu item "Apache", then select the menu item "Apache modules", then tick on the item "rewrite_module". And makesure you have the .htaccess file in your folder where you have your web application
